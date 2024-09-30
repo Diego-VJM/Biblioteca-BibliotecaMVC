@@ -23,6 +23,7 @@ public class EditorialController: Controller
     public async Task<IActionResult> PostEditorial(Editorial editorial)
     {
         await Ado.AltaEditorialAsync(editorial);
-        return View("../Editorial/AltaEditorial");
+        return RedirectToAction(nameof(ObtenerEditoriales));
+
     }
 }

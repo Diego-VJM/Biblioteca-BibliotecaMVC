@@ -55,7 +55,10 @@ public class TituloController : Controller
             Autor autor = autores.First(x => x.IdAutor == a);
             title.Autores.Add(autor);
         }
+
         await Ado.AltaTituloAsync(title);
-        return RedirectToAction(nameof(GetAltaTitulo));
+        return RedirectToAction(nameof(ObtenerTitulos));
+
+
     }
 }

@@ -24,7 +24,9 @@ public class CursoController : Controller
     [HttpPost]
     public async Task<IActionResult> AltaCurso(Curso curso)
     {
+
         await Ado.AltaCursoAsync(curso);
-        return View("../Classroom/AltaCurso");
+        return RedirectToAction(nameof(ObtenerCursos));
+
     }
 }

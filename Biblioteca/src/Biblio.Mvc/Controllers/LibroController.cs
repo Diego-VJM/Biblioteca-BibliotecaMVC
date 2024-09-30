@@ -36,7 +36,9 @@ public class LibroController : Controller
         var titulo = titulos.First(x => x.IdTitulo == bookModal.idTitulo);
         var editorial = editoriales.First(x => x.IdEditorial == bookModal.idEditorial);
         Libro libro = new Libro(titulo, editorial, bookModal.ISBN);
+        
+
         await Ado.AltaLibroAsync(libro);
-        return RedirectToAction(nameof(GetAltaLibro));
+        return RedirectToAction(nameof(ObtenerLibro));
     }
 }
