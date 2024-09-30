@@ -1,3 +1,4 @@
+-- Active: 1727642470797@@127.0.0.1@3306
 DROP DATABASE IF EXISTS 5to_Biblioteca;
 SELECT 'Creando BD' Estado;
 CREATE DATABASE 5to_Biblioteca;
